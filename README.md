@@ -28,6 +28,13 @@ The layout of the screens will shift from a grid to column format to better suit
 **Images**  
  Screens coded for this project:
   
-![Spots Desktop View] (images/Spots_App_desktop.png>)
-![Spots Moblile View] (images/Spots_App_Mobile.png>)  
+!Spots Desktop View (images/Spots_App_desktop.png)
+!Spots Moblile View (images/Spots_App_Mobile.png)  
 
+**Tech Stack**
+-HTML
+-CSS
+-Responsive Design
+
+GitHub Link:
+https://github.com/bgomes29/se_project_spots
