@@ -1,7 +1,18 @@
 .card {
     max-width: 413px;
     display: block;
-}
+ }
+
+ .card__title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+    max-width: 353px;
+    font-size: 20px
+    font-weight: 500;
+    line-height: 1.2;
+ }
 
 .card__image {
     height: 413px;
@@ -14,9 +25,6 @@
 .card__content {
     display: flex;
     align-items: center;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
     text-align: left;
     justify-content: space-between;
     overflow: hidden;
@@ -34,8 +42,8 @@
 }
 
 .card__like-btn:hover {
-    border-color: maroon;
-    border-width: 2px;
+    opacity: 100%;
+    background-color: transparent;
 }
 
 @media screen and (max-width: 627px) {
