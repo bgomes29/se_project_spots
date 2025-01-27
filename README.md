@@ -36,5 +36,5 @@ The layout of the screens will shift from a grid to column format to better suit
 -CSS
 -Responsive Design
 
-GitHub Link:
-https://github.com/bgomes29/se_project_spots
+Site/Deployment Link:
+https://bgomes29.github.io/se_project_spots/
