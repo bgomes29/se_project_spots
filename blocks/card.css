@@ -28,8 +28,7 @@
     text-align: left;
     justify-content: space-between;
     overflow: hidden;
-    color: #212121;
-    
+    color: #212121; 
 }
 
 .card__like-btn {
@@ -51,6 +50,5 @@
       grid-template-columns: repeat(auto-fit, 288px);
       height: 288px;
       width: 288px;
-            
     }
 }
