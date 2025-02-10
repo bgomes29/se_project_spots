@@ -23,7 +23,6 @@
   line-height: 1;
   text-overflow: ellipsis;
   overflow: hidden;
-  line-clamp: 3;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -85,35 +84,8 @@
 .profile__add-btn:hover {
   opacity: 80%;
 }
-
-@media screen and (max-width: 920px) {
-    .profile__title {
-      font-size: 38px;
-    }
-  }
-  
-  @media screen and (max-width: 800px) {
-    .profile__title {
-      font-size: 35px;
-    }
-  
-    .profile__image {
-      margin-left: 30px;
-    }
-  }
-  
-  @media screen and (max-width: 740px) {
-    .profile__title {
-      font-size: 32px;
-      max-width: 250px;
-    }
-  }
   
   @media screen and (max-width: 670px) {
-    .profile__title {
-      max-width: 196px;
-      font-size: 25px;
-    }
     .profile__add-button {
       width: 120px;
     }
@@ -176,22 +148,7 @@
   }
   
   @media screen and (max-width: 480px) {
-    .profile__image {
-      margin: 0 auto;
-    }
-  
-    .profile__info {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%;
-    }
-  
-    .profile__title {
-      font-size: 22px;
-      padding-top: 26px;
-    }
-  
+    
     .profile__description {
       width: 100%;
       text-align: center;
