@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Spots" />
     <meta name="author" content="Project" />
-    <meta name="keywords" content="HTML, CSS, ???" />
-    <link rel="stylesheet" href="pages/index.css" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Spots" />
+    <link rel="stylesheet" href="./pages/index.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <title>Spots</title>
   </head>
@@ -29,7 +29,7 @@
               <img src="./images/pencil.svg" alt="Pencil icon" />Edit Profile
             </button>
           </div>
-          <button class="profile__add-btn">
+          <button type="submit" class="profile__add-btn">
             <img src="./images/plus.svg" alt="Plus icon" />New Post
           </button>
         </section>
@@ -54,26 +54,29 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit profile</h2>
-          <form name="edit-profile" class="modal__form"></form>
-          <label for="profile-name-input" class="modal__label">
-            Name
-            <input
-              id="profile-name-input"
-              type="text"
-              class="modal__input"
-              placeholder="Name"
-            />
-          </label>
-          <label for="profile-description-input" class="modal__label">
-            Description
-            <input
-              id="profile-description-input"
-              type="text"
-              class="modal__input"
-              placeholder="Description"
-            />
-          </label>
-          <button type="submit" class="modal__submit-btn">Save</button>
+          <form name="edit-profile" class="modal__form">
+            <label for="profile-name-input" class="modal__label">
+              Name
+              <input
+                id="profile-name-input"
+                type="text"
+                class="modal__input"
+                placeholder="Name"
+                required
+              />
+            </label>
+            <label for="profile-description-input" class="modal__label">
+              Description
+              <input
+                id="profile-description-input"
+                type="text"
+                class="modal__input"
+                placeholder="Description"
+                required
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
         </div>
       </div>
     </div>
