@@ -90,6 +90,8 @@
   background-repeat: no-repeat;
 }
 
+
+
 @media screen and (max-width: 627px) {
   .card {
     align-items: center;
