@@ -47,7 +47,7 @@ const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImageEl = previewModal.querySelector(".modal__image");
-const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
+const previewModalCaptionEl = previewModal.querySelector(".modal__label");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
 
 // Card related elements
