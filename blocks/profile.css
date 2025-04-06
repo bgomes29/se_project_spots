@@ -81,12 +81,12 @@
   cursor: pointer
 }
 
-.profile__add-btn:hover {
+.profile__new-post-btn:hover {
   opacity: 80%;
 }
   
   @media screen and (max-width: 670px) {
-    .profile__add-button {
+    .profile__new-post-btn {
       width: 120px;
     }
   }
@@ -123,7 +123,7 @@
       align-items: center;
     }
   
-    .profile__add-btn {
+    .profile__new-post-btn {
       margin: 0;
       width: 288px;
       justify-content: center; 
@@ -155,7 +155,7 @@
       margin-bottom: 36px;
     }
   
-    .profile__add-button {
+    .profile__new-post-btn {
       margin: 0;
       width: 282px;
     }
