@@ -141,7 +141,7 @@
   }
 
   .modal__container {
-    padding: 12px;
+    padding: 22px 12px 12px;
   }
 
   .modal__title {
@@ -160,29 +160,26 @@
 
   .modal__submit-btn {
     width: 100%;
+    display: block;
+  }
+
+  .modal__input {
+    display: flex;
+    margin: auto;
+    box-sizing: border-box;
   }
 }
 
 @media screen and (max-width: 360px) {
-  .modal__container {
-    padding: 0;
-  
-  }
-
-  .modal__content_type_preview {
-    width: 288px;
-    height: 288px;
-  }
-
   .modal__image {
-    width: 288px;
-    height: 288px;
     object-fit: cover;
     border-radius: 8px;
+    max-width: 100vw;
+    width: 288px;
   }
 
-  .modal__close-btn_preview {
-    right: -32px;
-    top: -32px;
+  .modal__label {
+    display: block;
+    
   }
 }

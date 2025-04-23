@@ -58,22 +58,22 @@
           <form name="edit-profile" class="modal__form">
             <label for="profile-name-input" class="modal__label">
               Name
+            </label>
               <input
                 id="profile-name-input"
                 type="text"
                 class="modal__input"
                 placeholder="Name"
                 />
-            </label>
-            <label for="profile-description-input" class="modal__label">
+             <label for="profile-description-input" class="modal__label">
               Description
+            </label>
               <input
                 id="profile-description-input"
                 type="text"
                 class="modal__input"
                 placeholder="Description"
               />
-            </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
@@ -90,6 +90,7 @@
         <form class="modal__form" id="add-card-form">
           <label class="modal__label" for="add-card-link-input">
             Image link
+          </label>
             <input
               id="add-card-link-input"
               class="modal__input"
@@ -97,9 +98,9 @@
               placeholder="Paste a link to the picture"
               type="url"
             />
-          </label>
-          <label class="modal__label" for="add-card-name-input">
+           <label class="modal__label" for="add-card-name-input">
             Caption
+          </label>
             <input
               id="add-card-name-input"
               class="modal__input"
@@ -107,7 +108,6 @@
               placeholder="Type your caption"
               type="text"
             />
-          </label>
           <button type="submit" class="modal__submit-btn">Save</button>
         </form>
       </div>
@@ -118,7 +118,7 @@
         <button
           aria-label="Close modal"
           type="button"
-          class="modal__close-btn_preview"
+          class="modal__close-btn modal__close-btn_preview"
         ></button>
         <img class="modal__image" src="" alt="" />
         <p class="modal__label"></p>
