@@ -113,34 +113,34 @@ function handleAddCardSubmit(evt) {
   closeModal(cardModal);
 }
 
-  profileEditButton.addEventListener("click", () => {
-    console.log("Edit profile button clicked");
-    editModalNameInput.value = profileName.textContent;
-    editModalDescriptionInput.value = profileDescription.textContent;
-    openModal(editModal);
-  });
+profileEditButton.addEventListener("click", () => {
+  console.log("Edit profile button clicked");
+  editModalNameInput.value = profileName.textContent;
+  editModalDescriptionInput.value = profileDescription.textContent;
+  openModal(editModal);
+});
 
-  editModalCloseBtn.addEventListener("click", () => {
-    closeModal(editModal);
-  });
+editModalCloseBtn.addEventListener("click", () => {
+  closeModal(editModal);
+});
 
-  cardModalButton.addEventListener("click", () => {
-    console.log("New post button clicked");
-    openModal(cardModal);
-  });
+cardModalButton.addEventListener("click", () => {
+  console.log("New post button clicked");
+  openModal(cardModal);
+});
 
-  cardModalCloseBtn.addEventListener("click", () => {
-    closeModal(cardModal);
-  });
+cardModalCloseBtn.addEventListener("click", () => {
+  closeModal(cardModal);
+});
 
-  previewModalCloseBtn.addEventListener("click", () => {
-    closeModal(previewModal);
-  });
+previewModalCloseBtn.addEventListener("click", () => {
+  closeModal(previewModal);
+});
 
-  editFormElement.addEventListener("submit", handleEditFormSubmit);
-  cardForm.addEventListener("submit", handleAddCardSubmit);
+editFormElement.addEventListener("submit", handleEditFormSubmit);
+cardForm.addEventListener("submit", handleAddCardSubmit);
 
-  initialCards.forEach((item) => {
-    const cardElement = getCardElement(item);
-    cardsList.append(cardElement);
-  });
+initialCards.forEach((item) => {
+  const cardElement = getCardElement(item);
+  cardsList.append(cardElement);
+});
