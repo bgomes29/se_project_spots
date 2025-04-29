@@ -97,6 +97,20 @@
 
 .modal__label {
   font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+  display: block;
+  width: fit-content;
+  flex-direction: column;
+  padding-bottom: 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  color: rgba(33, 33, 33, 0.7);
+}
+
+.modal__label_preview {
+  font-weight: 500;
   display: block;
   width: fit-content;
   flex-direction: column;
