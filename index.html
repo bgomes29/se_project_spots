@@ -38,7 +38,7 @@
             <template id="card-template">
               <li class="card">
                 <img class="card__image" src="" alt="" />
-                  <div class="card__content">
+                <div class="card__content">
                   <h2 class="card__title"></h2>
                   <button type="button" class="card__delete-btn"></button>
                   <button type="button" class="card__like-btn"></button>
@@ -55,26 +55,42 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit profile</h2>
-          <form name="edit-profile" class="modal__form">
-            <label for="profile-name-input" class="modal__label">
-              Name
-            </label>
-              <input
-                id="profile-name-input"
-                type="text"
-                class="modal__input"
-                placeholder="Name"
-                />
-             <label for="profile-description-input" class="modal__label">
+          <form name="edit-profile" class="modal__form" novalidate>
+            <label 
+            for="profile-name-input" 
+            class="modal__label"> Name </label>
+            <span 
+            id="profile-name-input-error" 
+            class="modal__error">
+            Please fill out this field.
+          </span>
+            <input
+              id="profile-name-input"
+              type="text"
+              class="modal__input"
+              placeholder="Name"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <label for="profile-description-input" class="modal__label">
               Description
-            </label>
-              <input
-                id="profile-description-input"
-                type="text"
-                class="modal__input"
-                placeholder="Description"
-              />
-            <button type="submit" class="modal__submit-btn">Save</button>
+            <input
+              id="profile-description-input"
+              type="text"
+              class="modal__input"
+              placeholder="Description"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span 
+            id="profile-description-input-error" 
+            class="modal__error"
+              >Please fill out this field.</span></label>
+            <button 
+            type="submit" 
+            class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
@@ -87,32 +103,48 @@
           class="modal__close-btn"
         ></button>
         <h2 class="modal__title">New post</h2>
-        <form class="modal__form" id="add-card-form">
-          <label class="modal__label" for="add-card-link-input">
-            Image link
+        <form 
+        class="modal__form" 
+        id="add-card-form" 
+        novalidate>
+          <label 
+          class="modal__label" 
+          for="add-card-link-input">
+            Image link      
+          <input
+            id="add-card-link-input"
+            class="modal__input"
+            name="link"
+            placeholder="Paste a link to the picture"
+            type="url"
+            required
+          />
+          <span 
+            id="add-card-link-input-error" 
+            class="modal__error">
+          Please enter a valid url.</span> 
           </label>
-            <input
-              id="add-card-link-input"
-              class="modal__input"
-              name="link"
-              placeholder="Paste a link to the picture"
-              type="url"
-            />
-           <label class="modal__label" for="add-card-name-input">
-            Caption
-          </label>
-            <input
-              id="add-card-name-input"
-              class="modal__input"
-              name="name"
-              placeholder="Type your caption"
-              type="text"
-            />
+          <label class="modal__label" for="add-card-name-input">
+            Caption       
+          <input
+            id="add-card-name-input"
+            class="modal__input"
+            name="name"
+            placeholder="Type your caption"
+            type="text"
+            minlength="2"
+            maxlength="30"
+            required
+          />
+          <span 
+            id="add-card-name-input-error" 
+            class="modal__error">
+          Please fill out this field.</span>
+        </label>
           <button type="submit" class="modal__submit-btn">Save</button>
         </form>
       </div>
     </div>
-
     <div class="modal" id="preview-modal">
       <div class="modal__image-container modal__content_type_preview">
         <button
@@ -124,6 +156,7 @@
         <p class="modal__label_preview"></p>
       </div>
     </div>
+    <script src="./scripts/validation.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
