@@ -1,5 +1,3 @@
-import { resetValidation } from "./validation.js";
-
 const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",

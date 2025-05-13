@@ -78,5 +78,3 @@ const enableValidation = (settings) => {
 };
 
 enableValidation(settings);
-
-export { resetValidation };
