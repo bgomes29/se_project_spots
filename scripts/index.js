@@ -1,13 +1,3 @@
-const settings = {
-  formSelector: ".modal__form",
-  inputSelector: ".modal__input",
-  buttonElement: ".modal__submit-btn",
-  buttonElement: ".profile__edit-btn",
-  inactiveButtonClass: ".modal__submit-btn_disabled",
-  inputErrorClass: ".modal__input_type_error",
-  errorClass: ".modal__error",
-};
-
 const initialCards = [
   {
     name: "Val Thorens",

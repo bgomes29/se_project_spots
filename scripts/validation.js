@@ -1,9 +1,7 @@
-
 const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
-  buttonElement: ".modal__submit-btn",
-buttonElement: ".profile__edit-btn",
+  buttonElement: "submitButtonSelector",
   inactiveButtonClass: ".modal__submit-btn_disabled",
   inputErrorClass: ".modal__input_type_error",
   errorClass: ".modal__error",
@@ -16,18 +14,18 @@ const resetValidation = (formElement, inputList, config) => {
 };
 
 const showInputError = (formElement, inputElement, errorMessage) => {
-  const errorMsgEl = document.querySelector(`#${inputElement.id}-error`);
+  const errorMsgEl = formElement.querySelector(`#${inputElement.id}-error`);
   errorMsgEl.textContent = errorMessage;
-  inputElement.classList.add("modal__input_type_error");
+  inputElement.classList.add(config.inputErrorClass);
 };
 
 const hideInputError = (formElement, inputElement, config) => {
     const errorMsgEl = formElement.querySelector(`#${inputElement.id}-error`);
     errorMsgEl.textContent = "";
-    inputElement.classList.remove("modal__input_type_error");
+    inputElement.classList.remove(config.inputErrorClass);
     };
 
-const checkInputValidity = (formElement, inputElement) => {
+const checkInputValidity = (formElement, inputElement, config) => {
   if (!inputElement.validity.valid) {
     showInputError(formElement, inputElement, inputElement.validationMessage);
   } else {
@@ -35,27 +33,29 @@ const checkInputValidity = (formElement, inputElement) => {
   }
 };
 
-const hasInvalidInput = (inputList) => {
+const hasInvalidInput = (inputList, config) => {
   return inputList.some((input) => {
     return !input.validity.valid;
   });
 };
 
-const toggleButtonState = (inputList, buttonElement) => {
+const toggleButtonState = (inputList, buttonElement, config) => {
   if (hasInvalidInput(inputList)) {
-    buttonElement.disabled = true;
+    return disableButton;
     buttonElement.classList.add("modal__submit-btn_disabled");
   } else {
     buttonElement.disabled = false;
+    buttonElement.classList.remove("modal__submit-btn_disabled");
   }
 };
 
 const disableButton = (buttonElement, config) => {
+  buttonElement.classList.add(config.inactiveButtonClass); 
   buttonElement.disabled = true;
 };
 
 
-const setEventListeners = (formElement) => {
+const setEventListeners = (formElement, config) => {
   const inputList = Array.from(
     formElement.querySelectorAll(settings.inputSelector)
   );
@@ -63,7 +63,7 @@ const setEventListeners = (formElement) => {
 
   toggleButtonState(inputList, buttonElement, settings);
 
-  inputList.forEach((inputElement) => {
+  inputList.forEach((inputElement, config) => {
     inputElement.addEventListener("input", function () {
       checkInputValidity(formElement, inputElement);
     });
