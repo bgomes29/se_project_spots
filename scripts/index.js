@@ -162,9 +162,11 @@ function openModal(modal) {
   document.addEventListener("keydown", handleEscWithModal);
 
   modal.addEventListener("click", (evt) => {
-    if (evt.target === modal) {
-      closeModal(modal);
-    }
+    function handleEsc(evt, modal) {
+    if (evt.key === modal) {
+    closeModal(modal);
+  }
+}
   });
 
   modal.classList.add("modal_opened");
