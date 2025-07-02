@@ -201,7 +201,6 @@
   }
 
   .modal__label {
-    width: fit-content;
     text-overflow: hidden;
   }
 

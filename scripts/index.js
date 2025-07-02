@@ -158,19 +158,11 @@ function handleEsc(evt, modal) {
 }
 
 function openModal(modal) {
-  const handleEscWithModal = (evt) => handleEsc(evt, modal);
   document.addEventListener("keydown", handleEscWithModal);
-
-  modal.addEventListener("click", (evt) => {
-    function handleEsc(evt, modal) {
-    if (evt.key === modal) {
-    closeModal(modal);
-  }
-}
-  });
-
   modal.classList.add("modal_opened");
 }
+
+const handleEscWithModal = (evt) => handleEsc(evt, modal);
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
