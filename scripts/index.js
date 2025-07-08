@@ -42,7 +42,7 @@ const editModalDescriptionInput = editModal.querySelector(
 
 const cardModal = document.querySelector("#add-card-modal");
 const cardForm = cardModal.querySelector(".modal__form");
-const cardSubmitBtn = cardModal.querySelector(".modal__button");
+const cardSubmitBtn = cardModal.querySelector(".modal__submit-btn");
 const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
@@ -158,13 +158,18 @@ function handleEsc(evt, modal) {
 }
 
 function openModal(modal) {
+  document.addEventListener("click",(evt) => handleLayout(evt, modal));
   document.addEventListener("keydown", handleEscWithModal);
   modal.classList.add("modal_opened");
 }
 
-const handleEscWithModal = (evt) => handleEsc(evt, modal);
+function handleLayout(evt, modal) { 
+    if (evt.target === modal) { 
+    closeModal(modal); 
+  } 
 
 function closeModal(modal) {
+  document.removeEventListener("click",(evt) => handleLayout(evt, modal)); 
   modal.classList.remove("modal_opened");
   document.removeEventListener("keydown", (evt) => handleEsc(evt, modal));
 }
