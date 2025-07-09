@@ -115,7 +115,6 @@ function handleAddCardSubmit(evt) {
 }
 
 profileEditButton.addEventListener("click", () => {
-  console.log("Edit profile button clicked");
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
   resetValidation(
@@ -131,7 +130,7 @@ editModalCloseBtn.addEventListener("click", () => {
 });
 
 cardModalButton.addEventListener("click", () => {
-  console.log("New post button clicked");
+ 
   openModal(cardModal);
 });
 
@@ -151,25 +150,27 @@ initialCards.forEach((item) => {
   cardsList.append(cardElement);
 });
 
-function handleEsc(evt, modal) {
+function handleEscape(evt) {
   if (evt.key === "Escape") {
-    closeModal(modal);
+    const openedModal = document.querySelector(".modal_opened");
+    closeModal(openedModal);
+  }
+}
+
+function handleOverlay(evt) {
+  if (evt.target.classList.contains("modal_opened")) {
+    closeModal(evt.target);
   }
 }
 
 function openModal(modal) {
-  document.addEventListener("click",(evt) => handleLayout(evt, modal));
-  document.addEventListener("keydown", handleEscWithModal);
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", handleEscape);
+  modal.addEventListener("click", handleOverlay);
 }
 
-function handleLayout(evt, modal) { 
-    if (evt.target === modal) { 
-    closeModal(modal); 
-  } 
-
 function closeModal(modal) {
-  document.removeEventListener("click",(evt) => handleLayout(evt, modal)); 
   modal.classList.remove("modal_opened");
-  document.removeEventListener("keydown", (evt) => handleEsc(evt, modal));
+  document.removeEventListener("keydown", handleEscape);
+  modal.removeEventListener("click", handleOverlay);
 }
